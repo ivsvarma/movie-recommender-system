@@ -1,0 +1,11 @@
+# Ignore temporary code runner files (from VS Code, etc.)
+machine_learning/deployment/movie_recommender/tempCodeRunnerFile.py
+
+# Ignore working directory (if it contains temporary or large files)
+machine_learning/deployment/movie_recommender/working/
+
+# Ignore specific Python implementation file if you don't want to track it
+machine_learning/deployment/movie_recommender/api_implementation.py
+
+# Ignore Python bytecode files and __pycache__ directories
+machine_learning/deployment/movie_recommender/__pycache__/

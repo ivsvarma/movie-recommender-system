@@ -1,0 +1,24 @@
+This code demonstrates communication between a FastAPI backend and a Python client using HTTP.
+
+Explanation of Communication:
+FastAPI Backend:
+
+Defines an endpoint /movieSuggestion that accepts a POST request.
+The endpoint uses a Pydantic model (ModelInput) to parse and validate input (movie_name).
+Upon receiving the movie name, it uses a pre-trained movie similarity model and a movie dataset to find and return the top 20 most similar movies as recommendations in JSON format.
+Client Request:
+
+The client sends a POST request to the http://127.0.0.1:8000/movieSuggestion FastAPI endpoint using the requests library.
+The movie name is passed as JSON (input_json), mimicking how a real-world application or frontend would send data to the backend.
+Processing Workflow:
+
+Client Side:
+Prepares the input data as a dictionary (input_data_for_model) and converts it to JSON using json.dumps.
+Sends the JSON payload to the backend using requests.post.
+Backend Side:
+FastAPI receives the POST request.
+Parses the JSON data, processes the movie name to find recommendations, and sends back a JSON response with the top 20 movies.
+Client Side:
+Receives and prints the response (response.text), which contains the recommended movies in JSON format.
+Summary:
+The client sends JSON data via HTTP POST, and the FastAPI backend processes the data, computes recommendations, and sends back a JSON response. This is a common pattern in REST APIs for client-server communication.
